@@ -7,12 +7,12 @@ function setup() {
     function envia(evento) {
         evento.preventDefault();
         console.log('Formulário enviado!');
-        atualiza();
+        const valor = document.querySelector('#valor').value;
+        atualiza(valor);
     }
 }
 
-let estado = 0;
-function atualiza(){
+function atualiza(valor){
     const ol = document.querySelector('ol');
-    ol.innerHTML = `<li>${estado}</li>`
+    ol.innerHTML += `<li>${valor}</li>`
 }
